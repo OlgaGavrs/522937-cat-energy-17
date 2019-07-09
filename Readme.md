@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ольга Гавришина](https://up.htmlacademy.ru/adaptive/17/user/522937).
-* Наставник: `Неизвестно`.
+* Наставник: Ольга Ветер.
 
 ---
 
