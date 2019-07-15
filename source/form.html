@@ -6,33 +6,100 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="">
-        <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип»">
-      </a>
-      <a class="page-header__logo" href="">
-        <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-image" src="http://placehold.it/190x38" width="190" height="38" alt="Логотип»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list menu">
             <li class="menu__item">
-              <a href="index.html">Главная</a>
+              <a class="menu__link" href="index.html">Главная</a>
             </li>
             <li class="menu__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="menu__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="menu__item menu__item--active">
-              <a>Подбор программы</a>
+              <a class="menu__link">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-
+    <main class="page-main">
+      <h1 class="visually-hidden">Анкета по подбору индивидуальной программы вашему питомцу</h1>
+      <section class="questionnaire">
+        <h2 class="questionnaire__title header-level2">Подбор программы</h2>
+        <p class="questionnaire__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__group">
+            <label class="form__label" for="name">Имя:<sup>*</sup></label>
+            <input class="form__field" type="text" name="cat-name" id="name" value="Барсик">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
+            <input class="form__field" type="text" name="cat-weight" id="weight" value="7">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="age">Возраст (лет):</label>
+            <input class="form__field" type="text" name="cat-age" id="age" value="7">
+          </div>
+          <div class="form__radio-group">
+            <label class="form__label">
+              <input class="form__radio" type="radio" name="mission" value="slim" checked>
+              Похудение
+            </label>
+            <label class="form__label">
+              <input class="form__radio" type="radio" name="mission" value="fat">
+              Набор массы
+            </label>
+            <label class="form__label">
+              <input class="form__radio" type="radio" name="mission" value="need advice">
+              Не знаю (Нужен ваш совет)
+            </label>
+          </div>
+          <h3 class="form__title header-level3">Контактные данные (владельца кота)</h3>
+          <div class="form__group">
+            <label class="form__label" for="email">E-mail:<sup>*</sup></label>
+            <input class="form__field" type="text" name="owner-email" id="email" value="kuklachev@gmail.com">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="tel">Телефон:<sup>*</sup></label>
+            <input class="form__field" type="text" name="owner-tel" id="tel" value="8 (960) 900-60-90">
+          </div>
+          <h3 class="form__title header-level3">Комментарий</h3>
+          <textarea class="form__text" name="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+          <h3 class="form__title header-level3">Дополнительно</h3>
+          <div class="form__checkbox-group">
+            <input class="form__checkbox" type="checkbox" name="sugar" id="sugar-id" checked>
+            <label class="form__label" for="sugar-id">Сахарозаменитель</label>
+          </div>
+          <div class="form__checkbox-group">
+            <input class="form__checkbox" type="checkbox" name="water" id="water-id">
+            <label class="form__label" for="water-id">Питьевая вода</label>
+          </div>
+          <div class="form__checkbox-group">
+            <input class="form__checkbox" type="checkbox" name="milk" id="milk-id">
+            <label class="form__label" for="milk-id">Молоко</label>
+          </div>
+          <div class="form__checkbox-group">
+            <input class="form__checkbox" type="checkbox" name="vitamin" id="vitamin-id">
+            <label class="form__label" for="vitamin-id">Витамины</label>
+          </div>
+          <button type="submit" class="button form__button">Отправить заявку</button>
+          <p class="form__note"><sup>*</sup> — Обязательные поля</p>
+        </form>
+      </section>
+    </main>
     <footer class="page-footer">
+      <section class="page-footer__cooperation cooperation">
+        <h2 class="visually-hidden">Сотрудничество с нами</h2>
+        <b class="cooperation__invait">Приглашаем к сотрудничеству дилеров!</b>
+        <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <img class="cooperation__map" src="http://placehold.it/320x400" width="320" height="400" alt="Наш адрес на карте">
+      </section>
       <a class="page-footer__logo" href="index.html">
-          <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+          <img class="page-footer__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
