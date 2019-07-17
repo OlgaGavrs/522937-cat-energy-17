@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -261,68 +262,68 @@
             <a class="button card__button card__button--show" href="#">Показать все</a>
           </li>
         </ul>
-        <!-- На мой взгляд доп. товары должны быть в section со всем каталогом, как его часть. Или лучше их выносить в отдельный section? -->
-        <h3 class="catalog__add-title header-level3">Дополнительные товары</h3>
-        <ul class="catalog__add-list">
-          <li class="catalog__add-item add-card">
-            <table class="add-card__list">
-              <caption class="add-card__title">Сахарозаменитель</caption>
-              <tr>
-                <td class="add-card__field">
-                  1 упаковка (100 г)
-                </td>
-                <td class="add-card__value">
-                  200 Р.
-                </td>
-              </tr>
-            </table>
-            <a class="button add-card__button" href="#">Заказать</a>
-          </li>
-          <li class="catalog__add-item add-card">
-            <table class="add-card__list">
-              <caption class="add-card__title">Питьевая вода</caption>
-              <tr>
-                <td class="add-card__field">
-                  5 литров
-                </td>
-                <td class="add-card__value">
-                  50 Р.
-                </td>
-              </tr>
-            </table>
-            <a class="button add-card__button" href="#">Заказать</a>
-          </li>
-          <li class="catalog__add-item add-card">
-            <table class="add-card__list">
-              <caption class="add-card__title">Молоко</caption>
-              <tr>
-                <td class="add-card__field">
-                  1 литр
-                </td>
-                <td class="add-card__value">
-                  100 Р.
-                </td>
-              </tr>
-            </table>
-            <a class="button add-card__button" href="#">Заказать</a>
-          </li>
-          <li class="catalog__add-item add-card">
-            <table class="add-card__list">
-              <caption class="add-card__title">Витамины</caption>
-              <tr>
-                <td class="add-card__field">
-                  1 упаковка (30 г)
-                </td>
-                <td class="add-card__value">
-                  300 Р.
-                </td>
-              </tr>
-            </table>
-            <a class="button add-card__button" href="#">Заказать</a>
-          </li>
-        </ul>
       </section>
-      <!-- aside или section? -->
+      <section class="add-catalog">
+        <h3 class="add-catalog__title header-level3">Дополнительные товары</h3>
+        <table class="add-catalog__list">
+          <tr class="add-catalog__item add-card">
+            <td class="add-card__title">
+              Сахарозаменитель
+            </td>
+            <td class="add-card__field">
+              1 упаковка (100 г)
+            </td>
+            <td class="add-card__value">
+              200 Р.
+            </td>
+            <td class="add-card__button">
+              <a class="button" href="#">Заказать</a>
+            </td>
+          </tr>
+          <tr class="add-catalog__item add-card">
+            <td class="add-card__title">
+              Питьевая вода
+            </td>
+            <td class="add-card__field">
+              5 литров
+            </td>
+            <td class="add-card__value">
+              50 Р.
+            </td>
+            <td class="add-card__button">
+              <a class="button" href="#">Заказать</a>
+            </td>
+          </tr>
+          <tr class="add-catalog__item add-card">
+            <td class="add-card__title">
+              Молоко
+            </td>
+            <td class="add-card__field">
+              1 литр
+            </td>
+            <td class="add-card__value">
+              100 Р.
+            </td>
+            <td class="add-card__button">
+              <a class="button" href="#">Заказать</a>
+            </td>
+          </tr>
+          <tr class="add-catalog__item add-card">
+            <td class="add-card__title">
+              Витамины
+            </td>
+            <td class="add-card__field">
+              1 упаковка (30 г)
+            </td>
+            <td class="add-card__value">
+              300 Р.
+            </td>
+            <td class="add-card__button">
+              <a class="button" href="#">Заказать</a>
+            </td>
+          </tr>
+        </table>
+      </section>
       <aside class="promo">
         <p class="promo__text">Закажите все и получите чехол для кота в подарок!</p>
       </aside>
