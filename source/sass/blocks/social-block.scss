@@ -1,0 +1,7 @@
+.social__list {
+  @include list;
+}
+
+.social__link {
+  @include links;
+}

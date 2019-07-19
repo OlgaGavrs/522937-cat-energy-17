@@ -1,0 +1,14 @@
+.main-nav__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  width: 24px;
+  height: 18px;
+  background: 0 0;
+  border: 0;
+}
+
+.main-nav__list {
+  @include list;
+}

@@ -1,0 +1,18 @@
+@mixin links {
+  text-decoration: none;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin paragraph {
+  margin: 0;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #444444;
+}

@@ -1,1 +1,48 @@
-body { background: yellow; }
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap&subset=cyrillic");
+@import "variables.scss";
+@import "mixins.scss";
+@import "normalize.scss";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@import "blocks/header-level2.scss";
+@import "blocks/header-level3.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/menu-block.scss";
+@import "blocks/page-main.scss";
+@import "blocks/about-block.scss";
+@import "blocks/button-block.scss";
+@import "blocks/target-programs.scss";
+@import "blocks/advantages-block.scss";
+@import "blocks/example-block.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/cooperation-block.scss";
+@import "blocks/social-block.scss";
+@import "blocks/copyright-block.scss";
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
