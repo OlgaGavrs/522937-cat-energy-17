@@ -1,4 +1,5 @@
 .button {
+  @include links;
   background-color: #68b738;
   font-family: $oswald;
   font-size: 14px;
@@ -7,5 +8,4 @@
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  @include links;
 }
