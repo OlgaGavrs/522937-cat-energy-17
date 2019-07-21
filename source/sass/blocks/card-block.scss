@@ -1,0 +1,35 @@
+.card__title {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: left;
+  color: #111111;
+}
+
+.card__field {
+  @include card;
+  text-align: left;
+}
+
+.card__value {
+  @include card;
+  text-align: right;
+}
+
+.card__button {
+  display: block;
+  padding: 6px 10px;
+  width: 280px;
+  height: 40px;
+}
+
+.card__plus {
+  fill: #222222;
+  opacity: 0.2;
+}
+
+.card__button--show {
+  color: #444444;
+  background-color: #f2f2f2;
+}

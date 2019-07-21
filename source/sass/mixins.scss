@@ -16,3 +16,11 @@
   line-height: 18px;
   color: #444444;
 }
+
+@mixin card {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+  color: #444444;
+}

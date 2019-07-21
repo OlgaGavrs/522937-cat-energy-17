@@ -1,0 +1,22 @@
+.add-card__title {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  text-align: left;
+  color: #222222;
+}
+
+.add-card__field,
+.add-card__value {
+  @include card;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.add-card__button {
+  display: block;
+  padding: 6px 10px;
+  width: 280px;
+  height: 40px;
+}
