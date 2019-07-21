@@ -1,0 +1,14 @@
+.example {
+  background-color: #f2f2f2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.example__title {
+  color: #111111;
+  line-height: 60px;
+}
+
+.example__description {
+  @include paragraph;
+}

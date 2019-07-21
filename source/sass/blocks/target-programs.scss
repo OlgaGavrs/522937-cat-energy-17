@@ -1,0 +1,30 @@
+.target-programs__list {
+  @include list;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.target-programs__item {
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+}
+
+.target-programs__title {
+  text-transform: uppercase;
+}
+
+.target-programs__description {
+  @include paragraph;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.target-programs__link {
+  @include links;
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #111111;
+}

@@ -1,0 +1,37 @@
+@mixin links {
+  text-decoration: none;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin paragraph {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #444444;
+}
+
+@mixin card {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+  color: #444444;
+}
+
+@mixin text-form {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #444444;
+  text-transform: uppercase;
+}
