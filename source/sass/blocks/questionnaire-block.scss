@@ -1,0 +1,19 @@
+.questionnaire {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.questionnaire__title {
+  color: #111111;
+  line-height: 60px;
+}
+
+.questionnaire__description {
+  font-family: $oswald;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: left;
+  color: #111111;
+  text-transform: uppercase;
+}
