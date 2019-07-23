@@ -51,8 +51,24 @@
     margin-top: 52px;
     margin-bottom: 22px;
   }
-  // поменять цвет только на главной
-  // .main-nav--index .main-nav__link {
-  //   color: #ffffff;
-  // }
+  // только на главной
+  .main-nav--index .main-nav__list {
+    position: relative;
+    z-index: 2;
+  }
+
+  .main-nav--index::after {
+    content: "";
+    width: 720px;
+    height: 696px;
+    background-image: url("/img/index-background-desktop@1x.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .main-nav--index .main-nav__link {
+    color: #ffffff;
+  }
 }

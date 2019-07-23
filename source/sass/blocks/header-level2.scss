@@ -5,3 +5,11 @@
   line-height: 36px;
   margin: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .header-level2 {
+    font-family: $oswald;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
