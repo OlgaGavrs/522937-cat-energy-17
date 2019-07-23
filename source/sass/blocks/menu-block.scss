@@ -1,3 +1,8 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu__item {
   border-top: 1px solid #e5e5e5;
   // отступы из головы, для примера
@@ -8,9 +13,20 @@
   font-size: 20px;
   line-height: 20px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .menu__link {
   @include links;
   color: #222222;
+}
+
+@media (min-width: $tablet-width) {
+  .menu {
+    flex-direction: row;
+  }
+
+  .menu__item {
+    border: 0;
+  }
 }
