@@ -3,36 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип»">
-      </a>
-      <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 18" width="24" height="18" style="enable-background:new 0 0 24 18" xml:space="preserve">
-            <rect y="16" width="24" height="2" fill="#222222"/>
-            <rect y="8" width="24" height="2" fill="#222222"/>
-            <rect width="24" height="2" fill="#222222"/>
-          </svg>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu">
-            <li class="menu__item">
-              <a class="menu__link" href="index.html">Главная</a>
+      <!-- центровщик -->
+      <div class="page-header__wrapper">
+        <div class="page-header__box">
+          <a class="page-header__logo" href="index.html">
+            <span class="visually-hidden">На главную</span>
+          </a>
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="page-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link"  href="index.html">Главная</a>
             </li>
-            <li class="menu__item menu__item--active">
-              <a class="menu__link">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__item--active">Каталог продукции</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="form.html">Подбор программы</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Ассортимент интернет-магазина</h1>

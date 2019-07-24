@@ -1,14 +1,74 @@
-.main-nav__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: content-box;
-  width: 24px;
-  height: 18px;
-  background: 0 0;
-  border: 0;
-}
-
 .main-nav__list {
   @include list;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main-nav__item {
+  border-top: 1px solid #e5e5e5;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-nav__link {
+  @include links;
+  display: inline-block;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  width: 100%;
+  color: #222222;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    flex-direction: row;
+    border: 0;
+  }
+
+  .main-nav__item {
+    border: 0;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .main-nav__link {
+    margin-top: 20px;
+    margin-bottom: 55px;
+    margin-left: 37px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__item {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .main-nav__link {
+    margin-top: 52px;
+    margin-bottom: 22px;
+  }
+  // только на главной
+  .main-nav--index .main-nav__list {
+    position: relative;
+    z-index: 2;
+  }
+
+  .main-nav--index::after {
+    content: "";
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .main-nav--index .main-nav__link {
+    color: #ffffff;
+  }
 }
