@@ -23,7 +23,7 @@
   padding: 0;
   width: 191px;
   height: 39px;
-  background-image: url("/img/logo-mobile.svg");
+  background-image: url("../img/logo-mobile.svg");
   background-repeat: no-repeat;
 }
 
@@ -32,7 +32,7 @@
   padding: 0;
   width: 24px;
   height: 18px;
-  background: 0 url("/img/icon-mobile-menu.svg") no-repeat;
+  background: 0 url("../img/icon-mobile-menu.svg") no-repeat;
   border: 0;
 }
 
@@ -59,7 +59,7 @@
   }
 
   .page-header__logo {
-    background-image: url("/img/logo-tablet.svg");
+    background-image: url("../img/logo-tablet.svg");
     margin: 25px 0 62px;
     width: 173px;
     height: 58px;
@@ -82,7 +82,7 @@
   }
 
   .page-header__logo {
-    background-image: url("/img/logo-desktop.svg");
+    background-image: url("../img/logo-desktop.svg");
     margin: 56px 0 113px;
     width: 202px;
     height: 59px;

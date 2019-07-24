@@ -1,8 +1,8 @@
 .about__box {
   color: #ffffff;
   background-color: #ffffff;
-  background-image: url("/img/index-background-mobile.jpg");
-  background-size: 320px 305px;
+  background-image: url("../img/index-background-mobile.jpg");
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .about__box::after {
-  content: url("/img/index-can-mobile@1x.png");
+  content: url("../img/index-can-mobile@1x.png");
 }
 
 .about__program-choose {
@@ -61,7 +61,7 @@
   }
 
   .about__wrapper::after {
-    content: url("/img/index-can-tablet@1x.jpg");
+    content: url("../img/index-can-tablet@1x.jpg");
   }
 }
 
@@ -79,7 +79,7 @@
   }
 
   .about::after {
-    content: url("/img/index-can-desktop@1x.png");
+    content: url("../img/index-can-desktop@1x.png");
     z-index: 2;
   }
 }
