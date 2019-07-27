@@ -1,12 +1,18 @@
 .target-programs__list {
   @include list;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .target-programs__item {
   background-color: #f2f2f2;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  width: 280px;
+  // временно
+  min-height: 266px;
 }
 
 .target-programs__title {
@@ -27,4 +33,47 @@
   text-align: left;
   text-transform: uppercase;
   color: #111111;
+}
+
+@media (min-width: $tablet-width) {
+  .target-programs__list {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .target-programs__item {
+    margin-bottom: 30px;
+    width: 708px;
+    // временно
+    min-height: 372px;
+  }
+
+  .target-programs__description {
+    font-size: 16px;
+    line-height: 24px;
+    border: 0;
+  }
+
+  .target-programs__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .target-programs__list {
+    margin-top: 270px;
+    margin-bottom: 80px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .target-programs__item {
+    margin: 0;
+    width: 570px;
+    &:first-child {
+      margin-right: 80px;
+    }
+  }
 }

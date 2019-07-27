@@ -10,10 +10,7 @@
 
 .page-header__box {
   display: flex;
-  padding: 0 20px;
   justify-content: space-between;
-  //временно
-  // min-height: 65px;
 }
 
 .page-header__logo {
@@ -34,33 +31,19 @@
   height: 18px;
   background: 0 url("../img/icon-mobile-menu.svg") no-repeat;
   border: 0;
-}
-
-.page-header__nav {
-  //временно
-  min-height: 200px;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 30px;
-  }
-
-  .page-header__box,
-  .page-header__nav {
-    //временно
-    min-height: 145px;
-  }
-
-  .page-header__box {
-    padding: 0;
+    padding-top:12px;
+    padding-bottom: 45px;
   }
 
   .page-header__logo {
     background-image: url("../img/logo-tablet.svg");
-    margin: 25px 0 62px;
     width: 173px;
     height: 58px;
   }
@@ -72,18 +55,12 @@
 
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
-    padding: 0 40px;
-  }
-
-  .page-header__box,
-  .page-header__nav {
-    //временно
-    min-height: 195px;
+    padding-top: 41px;
+    padding-bottom: 20px;
   }
 
   .page-header__logo {
     background-image: url("../img/logo-desktop.svg");
-    margin: 56px 0 113px;
     width: 202px;
     height: 59px;
   }

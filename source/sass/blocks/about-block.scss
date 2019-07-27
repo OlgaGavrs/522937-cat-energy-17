@@ -1,9 +1,20 @@
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #ffffff;
   background-color: #ffffff;
   background-image: url("../img/index-background-mobile.jpg");
-  background-size: auto;
+  background-size: 320px 305px;
+  background-position: 50% 0;
   background-repeat: no-repeat;
+  min-width: 320px;
 }
 
 .about__header {
@@ -24,18 +35,21 @@
 
 .about__program-choose {
   display: block;
-  margin: 0 auto;
-  padding: 6px 10px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   width: 280px;
-  height: 40px;
 }
 
 @media (min-width: $tablet-width) {
   .about__wrapper {
-    margin-left: 120px;
+    position: relative;
+    align-items: flex-start;
   }
 
   .about__box {
+    margin-left: 90px;
+    margin-bottom: 20px;
+    align-items: flex-start;
     color: #111111;
     background-color: #ffffff;
     background-image: none;
@@ -43,11 +57,13 @@
 
   .about__header {
     width: 415px;
+    margin-bottom: 41px;
   }
 
   .about__slogan {
     font-size: 20px;
     line-height: 20px;
+    margin: 0;
   }
 
   .about__box::after {
@@ -55,12 +71,17 @@
   }
 
   .about__program-choose {
-    margin: 0;
+    position: absolute;
+    top: 230px;
+    left: 118px;
+    padding-top: 15px;
+    padding-bottom: 17px;
     width: 245px;
-    height: 52px;
+    z-index: 2;
   }
 
   .about__wrapper::after {
+    z-index: 1;
     content: url("../img/index-can-tablet@1x.jpg");
   }
 }
@@ -70,8 +91,18 @@
     display: flex;
   }
 
-  .about__wrapper {
-    margin-left: 125px;
+  .about__box {
+    margin-left: 80px;
+    margin-top: 77px;
+    margin-bottom: 53px;
+  }
+
+  .about__program-choose {
+    position: static;
+    margin-left: 80px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    width: 245px;
   }
 
   .about__wrapper::after {
@@ -80,6 +111,9 @@
 
   .about::after {
     content: url("../img/index-can-desktop@1x.png");
+    position: absolute;
+    top: 142px;
+    right: 330px;
     z-index: 2;
   }
 }

@@ -1,24 +1,106 @@
-.advantages {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
 .advantages__title {
   color: #111111;
   line-height: 60px;
+  margin-bottom: 35px;
 }
 
 .advantages__list {
   @include list;
 }
 
+.advantages__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  &:nth-child(1) .advantages__picture {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+  &:nth-child(2) .advantages__picture {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+  &:nth-child(3) .advantages__picture {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+  &:nth-child(4) .advantages__picture {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
 .advantages__picture {
   display: block;
+  margin: 0;
+  margin-right: 21px;
   width: 60px;
   height: 60px;
   background-color: #68b738;
+  background-position: 50% 50%;
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
 }
 
 .advantages__description {
   @include paragraph;
+  width: 192px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__title {
+    margin-bottom: 63px;
+  }
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    position: relative;
+    flex-direction: column;
+    min-width: 350px;
+    // flex-grow: 1;
+    z-index: 2;
+    &:nth-child(1)::after {
+      content: "1";
+    }
+    &:nth-child(2)::after {
+      content: "2";
+    }
+    &:nth-child(3)::after {
+      content: "3";
+    }
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+
+  .advantages__item::after {
+    position: absolute;
+    z-index: 1;
+    left: 126px;
+    font-family: $oswald;
+    font-size: 281px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 281;
+    color: #f2f2f2;
+  }
+
+  .advantages__picture {
+    margin: 0;
+    margin-bottom: 37px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    flex-basis: 350px;
+  }
 }
