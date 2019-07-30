@@ -4,32 +4,33 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap&subset=cyrillic" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap&subset=cyrillic" rel="stylesheet"> -->
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <div class="container page-header__wrapper">
-        <div class="page-header__box">
-          <a class="page-header__logo" href="#">
-            <span class="visually-hidden">На главную</span>
-          </a>
-          <button class="page-header__toggle" type="button">
+      <div class="page-header__wrapper page-header__wrapper--index">
+        <a class="page-header__logo" href="#">
+          <!-- на каждом разрешении разная картинка -->
+          <img src="img/logo-mobile.svg" width="191" height="38" alt="На главную">
+        </a>
+        <nav class="page-header__nav main-nav main-nav--index main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-        </div>
-        <nav class="page-header__nav main-nav main-nav--index">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link main-nav__link--active">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a class="main-nav__link main-nav__link--active">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -44,7 +45,7 @@
           <a class="about__program-choose button" href="form.html">Подобрать программу</a>
         </div>
       </section>
-      <section class="container target-programs">
+      <!-- <section class="container target-programs">
         <h2 class="visually-hidden">Целевые программы</h2>
         <ul class="target-programs__list">
           <li class="target-programs__item">
@@ -63,36 +64,45 @@
         <h2 class="header-level2 advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
-            <p class="advantages__picture">
-              <!-- <img class="advantages__image" src="img/advantage-leaf@1x.png" width="60" height="60" alt="Листик"> -->
-            </p>
+            <p class="advantages__picture"></p>
             <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
           <li class="advantages__item">
-              <p class="advantages__picture">
-                <!-- <img class="advantages__image" src="img/advantage-powder@1x.png" width="60" height="60" alt="Стакан воды"> -->
-              </p>
+              <p class="advantages__picture"></p>
               <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
           <li class="advantages__item">
-              <p class="advantages__picture">
-                <!-- <img class="advantages__image" src="img/advantage-dining@1x.png" width="60" height="60" alt="Столовые приборы"> -->
-              </p>
+              <p class="advantages__picture"></p>
               <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="advantages__item">
-              <p class="advantages__picture">
-                <!-- <img class="advantages__image" src="img/advantage-clock@1x.png" width="60" height="60" alt="Часы"> -->
-              </p>
+              <p class="advantages__picture"></p>
               <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
       </section>
-      <!-- <section class="example">
+      <section class="container example">
         <h2 class="header-level2 example__title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-         дальше пока не делала
-      </section> -->
+        <table class="example__tb">
+          <tr>
+            <td class="example__value">
+              5 кг
+            </td>
+            <td class="example__value">
+              60 дней
+            </td>
+          </tr>
+          <tr>
+            <td class="example__field">
+              снижение веса
+            </td>
+            <td class="example__field">
+              затрачено времени
+            </td>
+          </tr>
+        </table>
+      </section>-->
     </main>
     <!-- <footer class="page-footer">
       <section class="page-footer__cooperation cooperation">
@@ -157,5 +167,21 @@
         </a>
       </div>
     </footer> -->
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>

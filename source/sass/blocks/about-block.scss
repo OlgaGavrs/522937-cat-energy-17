@@ -2,26 +2,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.about__box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
   background-color: #ffffff;
+  // ???background-color: #64a83b;
   background-image: url("../img/index-background-mobile.jpg");
-  background-size: 320px 305px;
+  background-size: contain; // или лучше background-size: 320px 305px?;
   background-position: 50% 0;
+
   background-repeat: no-repeat;
   min-width: 320px;
 }
 
-.about__header {
+.about__box {
+  padding-top: 27px;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about__header {
+  margin-bottom: 25px;
 }
 
 .about__slogan {
+  margin: 0;
+  margin-bottom: 28px;
   font-family: $oswald;
   font-size: 14px;
   font-weight: normal;
@@ -44,26 +51,27 @@
   .about__wrapper {
     position: relative;
     align-items: flex-start;
+    background-color: #ffffff;
+    background-image: none;
   }
 
   .about__box {
     margin-left: 90px;
     margin-bottom: 20px;
+    padding: 0;
+    width: 415px;
     align-items: flex-start;
     color: #111111;
-    background-color: #ffffff;
-    background-image: none;
+    text-align: left;
   }
 
   .about__header {
-    width: 415px;
     margin-bottom: 41px;
   }
 
   .about__slogan {
     font-size: 20px;
     line-height: 20px;
-    margin: 0;
   }
 
   .about__box::after {
@@ -71,9 +79,7 @@
   }
 
   .about__program-choose {
-    position: absolute;
-    top: 230px;
-    left: 118px;
+    margin-left: 90px;
     padding-top: 15px;
     padding-bottom: 17px;
     width: 245px;
@@ -83,22 +89,24 @@
   .about__wrapper::after {
     z-index: 1;
     content: url("../img/index-can-tablet@1x.jpg");
+    position: absolute;
+    top: 200px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
+    // position: relative;
     display: flex;
+    // justify-content: space-between;
   }
 
   .about__box {
     margin-left: 80px;
-    margin-top: 77px;
-    margin-bottom: 53px;
+    margin-bottom: 25px;
   }
 
   .about__program-choose {
-    position: static;
     margin-left: 80px;
     padding-top: 15px;
     padding-bottom: 17px;
@@ -113,7 +121,7 @@
     content: url("../img/index-can-desktop@1x.png");
     position: absolute;
     top: 142px;
-    right: 330px;
+    right: 23%;
     z-index: 2;
   }
 }
