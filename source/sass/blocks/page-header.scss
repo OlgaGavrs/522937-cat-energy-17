@@ -27,7 +27,8 @@
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 24px;
@@ -39,16 +40,18 @@
     width: 173px;
     height: 58px;
     padding: 0;
+    margin-right: 96px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
     position: relative;
+    max-width: 1300px;
     padding-left: 30px;
     padding-right: 40px;
     padding-top: 53px;
-    padding-bottom: 102px;
+    padding-bottom: 110px;
   }
 
   .page-header__logo {
@@ -56,7 +59,7 @@
     height: 59px;
   }
 
-  .page-header__wrapper--index::after {
+  .page-header--index::after {
     content: "";
     width: 720px;
     height: 696px;

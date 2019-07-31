@@ -1,7 +1,7 @@
 .main-nav {
   position: relative;
-  width: 320px;
-  margin: 0 auto;
+  min-width: 320px;
+  // margin: 0 auto;
   background-color: #ffffff;
 }
 
@@ -13,10 +13,6 @@
   padding: 0;
   cursor: pointer;
   border: none;
-  // &:hover,
-  // &:active {
-  //   background-color: #624530;
-  // }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -59,6 +55,16 @@
   color: #222222;
 }
 
+.main-nav__link[href] {
+  &:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
+
 @media (max-width: $mobile-width-only) {
   .main-nav--closed .main-nav__wrapper {
     display: none;
@@ -89,16 +95,18 @@
     border: 0;
     font-size: 18px;
     line-height: 25px;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 35px;
+    }
   }
 
   .main-nav__link {
     padding-top: 18px;
     padding-bottom: 7px;
-    margin-left: 35px;
-  }
-
-  .main-nav__link--active {
-    border-bottom: 2px solid #68b738;
+    &--active {
+      border-bottom: 2px solid #68b738;
+    }
   }
 }
 
@@ -113,8 +121,8 @@
   }
 
   .main-nav__link {
-    padding-top: 32px;
-    padding-bottom: 8px;
+    padding-top: 21px;
+    padding-bottom: 7px;
   }
   // только на главной
   .main-nav--index .main-nav__list {
@@ -124,9 +132,17 @@
 
   .main-nav--index .main-nav__link {
     color: #ffffff;
-  }
 
-  .main-nav--index .main-nav__link--active {
-    border-bottom: 2px solid #ffffff;
+    &--active {
+      border-bottom: 2px solid #ffffff;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
