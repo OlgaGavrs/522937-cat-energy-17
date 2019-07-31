@@ -95,6 +95,7 @@
     border: 0;
     font-size: 18px;
     line-height: 25px;
+
     &:nth-child(1),
     &:nth-child(2) {
       margin-right: 35px;
@@ -104,6 +105,7 @@
   .main-nav__link {
     padding-top: 18px;
     padding-bottom: 7px;
+
     &--active {
       border-bottom: 2px solid #68b738;
     }
