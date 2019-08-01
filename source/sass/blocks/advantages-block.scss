@@ -74,6 +74,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .advantages {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
   .advantages__title {
     margin-bottom: 72px;
   }
@@ -81,8 +85,8 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 105px;
-    border-bottom: 1px solid #e5e5e5;
+    margin: 0;
+    padding-bottom: 103px;
   }
 
   .advantages__item {
@@ -132,8 +136,6 @@
     }
 
     &--powder {
-      margin-bottom: 0;
-
       & .advantages__description {
         width: 222px;
       }
@@ -144,6 +146,7 @@
     }
 
     &--dining {
+      margin-bottom: 0;
       margin-right: 63px;
 
       & .advantages__description {
@@ -170,10 +173,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .advantages {
+    border: none;
+  }
+
   .advantages__list {
     flex-wrap: nowrap;
     justify-content: space-between;
-    border: none;
   }
 
   .advantages__item {
