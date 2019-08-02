@@ -6,3 +6,10 @@
   margin: 0;
   color: #111111;
 }
+
+@media (min-width: $tablet-width) {
+  .header-level3 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

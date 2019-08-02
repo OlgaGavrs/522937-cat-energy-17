@@ -1,16 +1,38 @@
-.about__box {
-  color: #ffffff;
+.about {
+  margin-bottom: 20px;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #ffffff;
+  // ???background-color: #64a83b;
   background-image: url("../img/index-background-mobile.jpg");
-  background-size: auto;
+  background-size: contain; // или лучше background-size: 320px 305px?;
+  background-position: 50% 0;
+
   background-repeat: no-repeat;
+  min-width: 320px;
+}
+
+.about__box {
+  padding-top: 27px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
 }
 
 .about__header {
-  width: 250px;
+  margin-bottom: 25px;
 }
 
 .about__slogan {
+  margin: 0;
+  margin-bottom: 28px;
   font-family: $oswald;
   font-size: 14px;
   font-weight: normal;
@@ -24,25 +46,36 @@
 
 .about__program-choose {
   display: block;
-  margin: 0 auto;
-  padding: 6px 10px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   width: 280px;
-  height: 40px;
 }
 
 @media (min-width: $tablet-width) {
-  .about__wrapper {
-    margin-left: 120px;
+  .about {
+    margin-bottom: 529px;
   }
 
-  .about__box {
-    color: #111111;
+  .about__wrapper {
+    position: relative;
+    align-items: flex-start;
     background-color: #ffffff;
     background-image: none;
   }
 
-  .about__header {
+  .about__box {
+    margin-left: 90px;
+    margin-bottom: 20px;
+    padding: 0;
     width: 415px;
+    align-items: flex-start;
+    color: #111111;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .about__header {
+    margin-bottom: 41px;
   }
 
   .about__slogan {
@@ -55,23 +88,39 @@
   }
 
   .about__program-choose {
-    margin: 0;
+    margin-left: 90px;
+    padding-top: 15px;
+    padding-bottom: 17px;
     width: 245px;
-    height: 52px;
+    z-index: 2;
   }
 
   .about__wrapper::after {
+    z-index: 1;
     content: url("../img/index-can-tablet@1x.jpg");
+    position: absolute;
+    top: 200px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
+    // position: relative;
     display: flex;
+    margin-bottom: 270px;
+    // justify-content: space-between;
   }
 
-  .about__wrapper {
-    margin-left: 125px;
+  .about__box {
+    margin-left: 80px;
+    margin-bottom: 25px;
+  }
+
+  .about__program-choose {
+    margin-left: 80px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    width: 245px;
   }
 
   .about__wrapper::after {
@@ -80,6 +129,9 @@
 
   .about::after {
     content: url("../img/index-can-desktop@1x.png");
+    position: absolute;
+    top: 142px;
+    right: 23%;
     z-index: 2;
   }
 }

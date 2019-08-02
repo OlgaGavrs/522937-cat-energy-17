@@ -1,8 +1,42 @@
+.main-nav {
+  position: relative;
+  min-width: 320px;
+  // margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  margin: 11px 0 9px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: -54px;
+  right: 22px;
+  z-index: 2;
+  width: 19px;
+  height: 19px;
+  background: 0 url("../img/icon-close.svg") no-repeat;
+}
+
+.main-nav--closed .main-nav__toggle {
+  top: -54px;
+  right: 20px;
+  z-index: 2;
+  width: 24px;
+  height: 18px;
+  background: 0 url("../img/icon-mobile-menu.svg") no-repeat;
+}
+
 .main-nav__list {
   @include list;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .main-nav__item {
@@ -18,13 +52,42 @@
   display: inline-block;
   padding-top: 23px;
   padding-bottom: 22px;
-  width: 100%;
   color: #222222;
 }
 
+.main-nav__link[href] {
+  &:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    display: block;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .main-nav {
+    width: 500px;
+    margin: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav__list {
     flex-direction: row;
+    justify-content: flex-end;
     border: 0;
   }
 
@@ -32,24 +95,36 @@
     border: 0;
     font-size: 18px;
     line-height: 25px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-right: 35px;
+    }
   }
 
   .main-nav__link {
-    margin-top: 20px;
-    margin-bottom: 55px;
-    margin-left: 37px;
+    padding-top: 18px;
+    padding-bottom: 7px;
+
+    &--active {
+      border-bottom: 2px solid #68b738;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    width: 610px;
+  }
+
   .main-nav__item {
     font-size: 20px;
     line-height: 25px;
   }
 
   .main-nav__link {
-    margin-top: 52px;
-    margin-bottom: 22px;
+    padding-top: 21px;
+    padding-bottom: 7px;
   }
   // только на главной
   .main-nav--index .main-nav__list {
@@ -57,18 +132,19 @@
     z-index: 2;
   }
 
-  .main-nav--index::after {
-    content: "";
-    width: 720px;
-    height: 696px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-  }
-
   .main-nav--index .main-nav__link {
     color: #ffffff;
+
+    &--active {
+      border-bottom: 2px solid #ffffff;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
