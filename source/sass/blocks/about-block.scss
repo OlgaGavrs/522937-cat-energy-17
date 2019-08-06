@@ -3,27 +3,30 @@
 }
 
 .about__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  // ???background-color: #64a83b;
-  background-image: url("../img/index-background-mobile.jpg");
-  background-size: contain; // или лучше background-size: 320px 305px?;
-  background-position: 50% 0;
-
-  background-repeat: no-repeat;
   min-width: 320px;
 }
 
 .about__box {
   padding-top: 27px;
-  width: 250px;
+  padding-bottom: 167px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #ffffff;
   text-align: center;
+  background-color: #64a83b;
+  background-image: url("../img/index-background-mobile.jpg");
+  background-size: contain;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .about__header {
@@ -32,7 +35,6 @@
 
 .about__slogan {
   margin: 0;
-  margin-bottom: 28px;
   font-family: $oswald;
   font-size: 14px;
   font-weight: normal;
@@ -40,12 +42,27 @@
   text-transform: uppercase;
 }
 
-.about__box::after {
-  content: url("../img/index-can-mobile@1x.png");
+.about__wrapper::after {
+  content: "";
+  width: 280px;
+  height: 270px;
+  background-image: url("../img/index-can-mobile@1x.png");
+  background-size: 280px auto;
+  position: absolute;
+  bottom: 43px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-can-mobile@2x.png");
+  }
+}
+
+.about__button {
+  text-align: center;
 }
 
 .about__program-choose {
-  display: block;
+  display: inline-block;
+  margin-top: 135px;
   padding-top: 10px;
   padding-bottom: 12px;
   width: 280px;
@@ -57,63 +74,72 @@
   }
 
   .about__wrapper {
-    position: relative;
+    width: 100%;
     align-items: flex-start;
-    background-color: #ffffff;
-    background-image: none;
   }
 
   .about__box {
-    margin-left: 90px;
-    margin-bottom: 20px;
     padding: 0;
-    width: 415px;
     align-items: flex-start;
     color: #111111;
+    background: none;
     text-align: left;
     z-index: 2;
   }
 
   .about__header {
+    margin-left: 90px;
     margin-bottom: 41px;
+    width: 415px;
   }
 
   .about__slogan {
+    margin-left: 90px;
+    margin-bottom: 50px;
     font-size: 20px;
     line-height: 20px;
   }
 
-  .about__box::after {
-    content: "";
+  .about__button {
+    text-align: left;
+    z-index: 2;
   }
 
   .about__program-choose {
+    margin: 0;
     margin-left: 90px;
     padding-top: 15px;
     padding-bottom: 17px;
     width: 245px;
-    z-index: 2;
   }
 
   .about__wrapper::after {
-    z-index: 1;
-    content: url("../img/index-can-tablet@1x.jpg");
-    position: absolute;
+    width: 709px;
+    height: 609px;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-size: 709px auto;
     top: 200px;
+    left: 30px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
-    // position: relative;
     display: flex;
     margin-bottom: 270px;
-    // justify-content: space-between;
   }
 
-  .about__box {
+  .about__header {
     margin-left: 80px;
-    margin-bottom: 25px;
+  }
+
+  .about__slogan {
+    margin-left: 80px;
+    margin-bottom: 52px;
   }
 
   .about__program-choose {
@@ -124,14 +150,17 @@
   }
 
   .about__wrapper::after {
-    content: "";
-  }
-
-  .about::after {
-    content: url("../img/index-can-desktop@1x.png");
-    position: absolute;
-    top: 142px;
-    right: 23%;
+    width: 552px;
+    height: 499px;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-size: 552px auto;
+    top: -84px;
+    left: 50%;
+    margin-left: -158px;
     z-index: 2;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-can-desktop@2x.png");
+    }
   }
 }
