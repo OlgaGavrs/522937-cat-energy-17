@@ -87,10 +87,10 @@
 
 .advantages__description {
   @include paragraph;
-}
 
-br {
-  display: none;
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -192,10 +192,10 @@ br {
     font-size: 16px;
     line-height: 24px;
     z-index: 2;
-  }
 
-  br {
-    display: block;
+    & br {
+      display: block;
+    }
   }
 }
 
