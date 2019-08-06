@@ -25,28 +25,26 @@
 }
 
 .cooperation__adress {
-  width: 135px;
   @include paragraph;
+  width: 135px;
   line-height: 20px;
   text-align: left;
 }
 
-.cooperation {
-  &::after {
-    content: "";
-    margin: 0 auto;
-    margin-top: -40px;
-    display: block;
-    width: 320px;
-    height: 400px;
-    background-color: #f2f2f2;
-    background-image: url("../img/bg-map-mobile@1x.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+.cooperation::after {
+  content: "";
+  margin: 0 auto;
+  margin-top: -40px;
+  display: block;
+  width: 320px;
+  height: 400px;
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-map-mobile@2x.png");
-    }
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
   }
 }
 
