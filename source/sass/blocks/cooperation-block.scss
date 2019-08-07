@@ -1,15 +1,24 @@
 .cooperation {
+  position: relative;
+}
+
+.cooperation__wrapper {
   background-color: #ffffff;
-  padding: 0 30px;
+  padding: 33px 20px 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .cooperation__invait {
   margin: 0;
+  width: 125px;
   font-family: $oswald;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  line-height: 25px;
+  line-height: 20px;
   text-align: left;
   text-transform: uppercase;
   color: #111111;
@@ -17,4 +26,121 @@
 
 .cooperation__adress {
   @include paragraph;
+  width: 135px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.cooperation::after {
+  content: "";
+  margin: 0 auto;
+  margin-top: -40px;
+  display: block;
+  width: 320px;
+  height: 400px;
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+}
+
+.cooperation__map-pointer {
+  position: absolute;
+  top: 260px;
+  right: 50%;
+  margin-right: -27px;
+  z-index: 3;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__wrapper {
+    padding: 66px 72px 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cooperation__invait {
+    margin: 0;
+    width: 155px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .cooperation__adress {
+    width: 155px;
+    font-size: 16px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+    & span {
+      margin-top: 10px;
+    }
+  }
+
+  .cooperation::after {
+    margin: 0 auto;
+    width: 767px;
+    height: 400px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+  }
+
+  .cooperation__map-pointer {
+    top: 340px;
+    margin-right: -56px;
+    z-index: 3;
+    width: 113px;
+    height: 106px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation__wrapper {
+    padding: 60px 75px 60px 90px;
+    align-items: center;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 4;
+  }
+
+  .cooperation__adress {
+    text-align: left;
+
+    & span {
+      margin-top: 10px;
+    }
+  }
+
+  .cooperation::after {
+    width: 1440px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
+  }
+
+  .cooperation__map-pointer {
+    top: 150px;
+    right: 380px;
+    z-index: 3;
+    width: 113px;
+    height: 106px;
+  }
 }

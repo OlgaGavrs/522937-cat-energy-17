@@ -5,7 +5,7 @@
 .example__title {
   color: #111111;
   line-height: 60px;
-  margin-top: 17px;
+  padding-top: 15px;
   margin-bottom: 23px;
 }
 
@@ -19,6 +19,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  // временно
+  padding-bottom: 50px;
 }
 
 .example__box {
@@ -74,7 +76,7 @@
   }
 
   .example__title {
-    margin-top: 26px;
+    padding-top: 42px;
     margin-bottom: 64px;
   }
 
@@ -133,7 +135,7 @@
 
 @media (min-width: $desktop-width) {
   .example__title {
-    margin-top: 22px;
+    padding-top: 24px;
     margin-bottom: 146px;
   }
 

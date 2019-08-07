@@ -1,3 +1,8 @@
+.copyright {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
 .copyright__link {
   @include links;
   font-family: "Arial", sans-serif;
@@ -7,4 +12,25 @@
   line-height: 16px;
   text-align: left;
   color: #444444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover svg {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & svg {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding: 0;
+  }
 }
