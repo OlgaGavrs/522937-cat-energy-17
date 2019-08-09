@@ -1,5 +1,6 @@
 .example {
   background-color: #f2f2f2;
+  padding-bottom: 39px;
 }
 
 .example__title {
@@ -19,8 +20,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  // временно
-  padding-bottom: 50px;
+  margin-bottom: 26px;
 }
 
 .example__box {
@@ -70,9 +70,55 @@
   color: #111111;
 }
 
+.before-after {
+  margin: 0 auto;
+  width: 311px;
+  height: 232px;
+  background-image: url("../img/before-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scale {
+  margin: 35px auto 0;
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+// .example__image-slider {
+// 	position:relative;
+// 	display: inline-block;
+// }
+
+// .example__image-slider > div {
+// 	position: absolute;
+// 	top: 0; bottom: 0; left: 0;
+// 	width: 50%;
+// 	max-width: 100%;
+// 	overflow: hidden;
+// 	resize: horizontal;
+// }
+
+// .example__image-slider > div:before {
+// 	content: '';
+// 	position: absolute;
+// 	right: 0; bottom: 0;
+// 	width: 13px; height: 13px;
+// 	padding: 5px;
+// 	background: linear-gradient(-45deg, white 50%, transparent 0);
+// 	background-clip: content-box;
+// 	cursor: ew-resize;
+// 	-webkit-filter: drop-shadow(0 0 2px black);
+// 	filter: drop-shadow(0 0 2px black);
+// }
+
 @media (min-width: $tablet-width) {
   .example {
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, #ffffff 57%, #f2f2f2 43%);
+    padding-bottom: 80px;
   }
 
   .example__title {
@@ -92,6 +138,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: no-wrap;
+    margin-bottom: 77px;
   }
 
   .example__box {
@@ -131,9 +178,33 @@
     line-height: 30px;
     text-align: right;
   }
+
+  .before-after {
+    margin: 0 auto;
+    width: auto;
+    height: 517px;
+    background-image: url("../img/before-tablet@1x.png");
+    background-size: contain;
+  }
+
+  .scale {
+    width: 428px;
+    height: 6px;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    padding-bottom: 68px;
+    background: linear-gradient(to top, #f2f2f2 75%, #ffffff 25%);
+  }
+
+  .example__inner {
+    position: relative;
+  }
+
   .example__title {
     padding-top: 24px;
     margin-bottom: 146px;
@@ -147,6 +218,7 @@
   .example__wrapper {
     width: 432px;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   .example__total {
@@ -158,5 +230,26 @@
     & span {
       margin-left: 64px;
     }
+  }
+
+  .example__cat-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .before-after {
+    margin: 0;
+    width: 635px;
+    background-image: url("../img/before-desktop@1x.png");
+    background-size: contain;
+  }
+
+  .scale {
+    margin-top: 16px;
+    width: 428px;
+    height: 6px;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
   }
 }
