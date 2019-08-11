@@ -10,7 +10,7 @@
 
 .page-footer__logo {
   padding-top: 39px;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
   text-align: center;
 
   &:hover img {
@@ -30,24 +30,30 @@
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
     flex-direction: row;
-    justify-content: space-between;
-    padding-top: 51px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 56px;
     padding-bottom: 52px;
   }
 
   .page-footer__logo {
     padding: 0;
-    align-self: center;
   }
 
   .page-footer__social {
-    align-self: center;
-    width: 125px;
+    margin-left: 155px;
+    margin-right: 138px;
     border: none;
   }
 
   .page-footer__copyright {
-    width: 170px;
-    align-self: center;
+    width: 165px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__social {
+    margin-left: 412px;
+    margin-right: 394px;
   }
 }

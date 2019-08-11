@@ -2,14 +2,15 @@
   @include list;
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 21px;
-  padding-left: 93px;
-  padding-right: 102px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  padding-left: 72px;
+  padding-right: 83px;
 }
 
 .social__link {
   @include links;
+  display: inline-block;
 
   &:hover svg {
     fill: #68b738;
@@ -23,5 +24,24 @@
 @media (min-width: $tablet-width) {
   .social__list {
     padding: 0;
+    width: 124px;
+    justify-content: space-between;
+  }
+
+  .social__link {
+    &--vkontakte svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    &--instagram svg {
+      width: 23px;
+      height: 30px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+      height: 30px;
+    }
   }
 }
