@@ -249,7 +249,7 @@
   }
 }
 
-&.form__checkbox-text::before {
+.form__checkbox-text::before {
   content: "";
   position: absolute;
   top: -5px;
