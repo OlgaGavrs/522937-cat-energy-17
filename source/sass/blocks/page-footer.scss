@@ -9,8 +9,8 @@
 }
 
 .page-footer__logo {
+  height: 93px;
   padding-top: 39px;
-  padding-bottom: 28px;
   text-align: center;
 
   &:hover img {
@@ -33,11 +33,12 @@
     justify-content: center;
     align-items: center;
     padding-top: 56px;
-    padding-bottom: 52px;
+    padding-bottom: 60px;
   }
 
   .page-footer__logo {
     padding: 0;
+    height: auto;
   }
 
   .page-footer__social {
@@ -55,5 +56,10 @@
   .page-footer__social {
     margin-left: 412px;
     margin-right: 394px;
+  }
+
+  .page-footer__wrapper {
+    padding-top: 59px;
+    padding-bottom: 57px;
   }
 }

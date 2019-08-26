@@ -1,6 +1,6 @@
 .example {
   background-color: #f2f2f2;
-  padding-bottom: 39px;
+  // padding-bottom: 27px;
 }
 
 .example__title {
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
 .example__box {
@@ -70,55 +70,108 @@
   color: #111111;
 }
 
-.before-after {
+// .before-after {
+//   margin: 0 auto;
+//   width: 311px;
+//   height: 232px;
+//   background-image: url("../img/before-mobile@1x.png");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+// .scale {
+//   margin: 35px auto 0;
+//   width: 84px;
+//   height: 14px;
+//   border-radius: 6px;
+//   border: solid 1px #cdcdcd;
+//   background-color: #ffffff;
+// }
+
+.example__diff {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.example__diff-img-container {
+  max-width: 280px;
   margin: 0 auto;
-  width: 311px;
-  height: 232px;
-  background-image: url("../img/before-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.scale {
-  margin: 35px auto 0;
-  width: 84px;
+.example__diff-img {
+  display: block;
+  margin-left: -20px;
+  max-width: inherit;
+
+  &--after {
+    display: none;
+  }
+}
+
+.example__diff-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 195px;
+  margin: 0 auto;
+  padding: 30px 0 35px;
+}
+
+.example__diff-range-btn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: $oswald;
+  line-height: 20px;
+  text-align: left;
+  cursor: pointer;
+  color: #111111;
+  transition: 0.3s;
+}
+
+.example__diff-progress {
+  position: relative;
+  max-width: 84px;
+  width: 100%;
   height: 14px;
-  border-radius: 6px;
-  border: solid 1px #cdcdcd;
-  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 50px;
+  background: #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    right: 5px;
+    width: 35px;
+    height: 6px;
+    border-radius: 50px;
+    background: #68b738;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
 }
-
-// .example__image-slider {
-// 	position:relative;
-// 	display: inline-block;
-// }
-
-// .example__image-slider > div {
-// 	position: absolute;
-// 	top: 0; bottom: 0; left: 0;
-// 	width: 50%;
-// 	max-width: 100%;
-// 	overflow: hidden;
-// 	resize: horizontal;
-// }
-
-// .example__image-slider > div:before {
-// 	content: '';
-// 	position: absolute;
-// 	right: 0; bottom: 0;
-// 	width: 13px; height: 13px;
-// 	padding: 5px;
-// 	background: linear-gradient(-45deg, white 50%, transparent 0);
-// 	background-clip: content-box;
-// 	cursor: ew-resize;
-// 	-webkit-filter: drop-shadow(0 0 2px black);
-// 	filter: drop-shadow(0 0 2px black);
-// }
 
 @media (min-width: $tablet-width) {
   .example {
-    background: linear-gradient(to bottom, #ffffff 57%, #f2f2f2 43%);
-    padding-bottom: 80px;
+    background-color: #ffffff;
+    padding-bottom: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 43%;
+      background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+      z-index: 0;
+    }
   }
 
   .example__title {
@@ -138,7 +191,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: no-wrap;
-    margin-bottom: 77px;
+    margin-bottom: 43px;
   }
 
   .example__box {
@@ -179,34 +232,100 @@
     text-align: right;
   }
 
-  .before-after {
-    margin: 0 auto;
-    width: auto;
-    height: 517px;
-    background-image: url("../img/before-tablet@1x.png");
-    background-size: contain;
+  .example__diff-img-container {
+    position: relative;
+    display: flex;
+    max-width: inherit;
+    height: 560px;
+    z-index: 1;
   }
 
-  .scale {
-    width: 428px;
+  .example__diff-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0 auto;
+
+    &--before {
+      clip: rect(auto, 345px, auto, auto);
+    }
+
+    &--after {
+      display: block;
+      clip: rect(auto, auto, auto, 345px);
+    }
+  }
+
+  .example__diff-range {
+    max-width: 575px;
+    padding: 13px 0 70px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .example__diff-range-btn {
+    font-size: 20px;
+    padding: 5px 0;
+    border-bottom: 1px dotted #d9d9d9;
+  }
+
+  .example__diff-progress {
+    max-width: inherit;
     height: 6px;
-    border-radius: 2.5px;
-    background-color: #dcdcdc;
+    margin: 0 25px;
+    background: #d9d9d9;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .example__diff-tog {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: #68b738;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .example {
-    padding-bottom: 68px;
-    background: linear-gradient(to top, #f2f2f2 75%, #ffffff 25%);
+  .example::after {
+    height: 72%;
+    background: linear-gradient(to right, #f2f2f2 72.5%, #eaeaea 37.5%);
   }
 
   .example__inner {
     position: relative;
+    z-index: 1;
   }
 
   .example__title {
-    padding-top: 24px;
+    padding-top: 36px;
     margin-bottom: 146px;
   }
 
@@ -221,10 +340,15 @@
     margin-bottom: 0;
   }
 
+  .example__field {
+    background-color: #f2f2f2;
+  }
+
   .example__total {
     flex-direction: row;
     margin: 0;
     padding-top: 56px;
+    padding-bottom: 69px;
     text-align: left;
 
     & span {
@@ -232,24 +356,32 @@
     }
   }
 
-  .example__cat-box {
+  .example__diff {
     position: absolute;
-    top: 0;
+    width: 700px;
+    top: -20px;
     right: 0;
   }
 
-  .before-after {
-    margin: 0;
-    width: 635px;
-    background-image: url("../img/before-desktop@1x.png");
-    background-size: contain;
+  .example__diff-img-container {
+    height: 520px;
   }
 
-  .scale {
-    margin-top: 16px;
-    width: 428px;
-    height: 6px;
-    border-radius: 2.5px;
-    background-color: #dcdcdc;
+  .example__diff-img {
+    left: 5px;
+
+    &--before {
+      clip: rect(auto, 365px, auto, auto);
+    }
+
+    &--after {
+      clip: rect(auto, auto, auto, 365px);
+    }
+  }
+
+  .example__diff-range {
+    margin: 0;
+    margin-left: 87px;
+    padding-top: 33px;
   }
 }

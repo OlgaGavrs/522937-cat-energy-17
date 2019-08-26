@@ -71,7 +71,7 @@
             <p class="about__slogan">Занялся собой? Займись котом!</p>
           </div>
           <div class="container about__button">
-            <a class="about__program-choose button" href="form.html">Подобрать программу</a>
+            <a class="button about__program-choose" href="form.html">Подобрать программу</a>
           </div>
         </div>
       </section>
@@ -169,24 +169,27 @@
               <span>15 000 руб.</span>
             </p>
           </div>
-          <!-- <div class="example__image-slider">
+          <div class="example__diff">
             <div>
-              <picture>
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                <img src="img/before-mobile@1x.png" height="232" alt="Фото кота ДО">
-              </picture>
-            </div>
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-              <img src="img/after-mobile@1x.png" height="232" alt="Фото кота ПОСЛЕ">
-            </picture>
-          </div> -->
-          <div class="example__cat-box">
-            <div class="before-after">
-            </div>
-            <div class="scale">
+              <div class="example__diff-img-container">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                  <img class="example__diff-img example__diff-img--before" src="img/before-mobile@1x.png" height="232" alt="Фото кота ДО">
+                </picture>
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                  <img class="example__diff-img example__diff-img--after" src="img/after-mobile@1x.png" height="232" alt="Фото кота ПОСЛЕ">
+                </picture>
+              </div>
+              <div class="example__diff-range">
+                <button class="example__diff-range-btn">Было</button>
+                <div class="example__diff-progress">
+                  <div class="example__diff-tog"></div>
+                </div>
+                <button class="example__diff-range-btn">Стало</button>
+              </div>
             </div>
           </div>
         </div>

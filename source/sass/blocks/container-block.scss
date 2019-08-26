@@ -11,6 +11,13 @@
     padding-right: 30px;
   }
 
+  @media (max-width: 1299px) and (min-width: 768px) {
+    &--quest {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
   @media (min-width: $desktop-width) { //$desktop-width = 1300px;
     padding-left: 40px;
     padding-right: 40px;
