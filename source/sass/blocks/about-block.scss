@@ -67,6 +67,8 @@
   padding-top: 10px;
   padding-bottom: 12px;
   width: 280px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @media (min-width: $tablet-width) {
@@ -112,6 +114,8 @@
     padding-top: 15px;
     padding-bottom: 17px;
     width: 245px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .about__wrapper::after {

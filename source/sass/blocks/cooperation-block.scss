@@ -3,12 +3,16 @@
 }
 
 .cooperation__wrapper {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 29px 23px 28px 19px;
   display: flex;
   justify-content: space-between;
   position: relative;
   z-index: 2;
+
+  &--color {
+    background-color: #f2f2f2;
+  }
 }
 
 .cooperation__invait {
@@ -58,10 +62,10 @@
 
 @media (min-width: $tablet-width) {
   .cooperation__wrapper {
+    // background-color: #f2f2f2;
     padding: 66px 72px 59px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
     position: relative;
     z-index: 2;
   }
@@ -81,7 +85,7 @@
     flex-direction: column;
 
     & span {
-      margin-top: 10px;
+      margin-top: 15px;
     }
   }
 

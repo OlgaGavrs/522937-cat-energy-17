@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border-bottom: 1px solid #e5e5e5;
-  border-collapse: collapse;
   border-spacing: 0;
 }
 
@@ -30,7 +28,7 @@
 
 .add-card__btn-wrapper {
   padding: 0;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .add-card__button {
@@ -39,6 +37,7 @@
   padding-bottom: 11px;
   width: 280px;
   font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -46,7 +45,7 @@
     justify-content: flex-end;
     align-items: baseline;
     flex-wrap: wrap;
-    padding: 26px 36px;
+    padding: 27px 36px 23px;
   }
 
   .add-card__title {
@@ -55,7 +54,7 @@
     line-height: 20px;
     padding: 0;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 
   .add-card__field,

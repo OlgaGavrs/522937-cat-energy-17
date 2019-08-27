@@ -2,9 +2,9 @@
   @include links;
   background-color: #68b738;
   font-family: $oswald;
-  font-size: 14px;
+  // font-size: 16px;
   font-weight: normal;
-  line-height: 18px;
+  // line-height: 20px;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -19,9 +19,9 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .button {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
+// @media (min-width: $tablet-width) {
+//   .button {
+//     font-size: 20px;
+//     line-height: 20px;
+//   }
+// }
