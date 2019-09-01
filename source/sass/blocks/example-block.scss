@@ -316,7 +316,9 @@
 @media (min-width: $desktop-width) {
   .example::after {
     height: 72%;
-    background: linear-gradient(to right, #f2f2f2 72.5%, #eaeaea 37.5%);
+    max-width: 1300px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #f2f2f2 75%, #eaeaea 25%);
   }
 
   .example__inner {

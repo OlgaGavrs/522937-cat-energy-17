@@ -35,18 +35,23 @@
     padding-bottom: 55px;
   }
 
+  .questionnaire__form {
+    margin-bottom: 70px;
+    margin-top: 67px;
+  }
+
   .questionnaire__description {
     font-size: 20px;
     line-height: 30px;
     width: 373px;
   }
-
-  .questionnaire__form {
-    margin-top: 67px;
-  }
 }
 
 @media (min-width: $desktop-width) {
+  .questionnaire__form {
+    margin-bottom: 79px;
+  }
+
   .questionnaire__description {
     width: 323px;
   }

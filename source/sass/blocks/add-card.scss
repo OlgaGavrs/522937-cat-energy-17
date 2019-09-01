@@ -45,7 +45,7 @@
     justify-content: flex-end;
     align-items: baseline;
     flex-wrap: wrap;
-    padding: 27px 36px 23px;
+    padding: 27px 36px 24px;
   }
 
   .add-card__title {
@@ -85,24 +85,28 @@
   .add-card {
     flex-wrap: nowrap;
     padding: 0;
-    padding-top: 18px;
+    padding-top: 17px;
+    padding-bottom: 12px;
     // border-bottom: none;
     // border-top: 1px solid #e5e5e5;
   }
 
   .add-card__title {
     width: 325px;
+    margin-bottom: 0;
   }
 
   .add-card__field {
-    width: 240px;
+    width: 244px;
     text-align: left;
+    margin-bottom: 0;
   }
 
   .add-card__value {
     margin-left: 0;
-    width: 63px;
+    width: 81px;
     text-align: left;
+    margin-bottom: 0;
   }
 
   .add-card__button {
