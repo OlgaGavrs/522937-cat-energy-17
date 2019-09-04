@@ -2,9 +2,20 @@
   position: relative;
 }
 
+.cooperation__container {
+  position: relative;
+  background-color: #ffffff;
+  margin-left: -19px;
+  margin-right: -23px;
+
+  &--color {
+    background-color: #f2f2f2;
+  }
+}
+
 .cooperation__wrapper {
   background-color: #ffffff;
-  padding: 29px 23px 28px 19px;
+  padding: 29px 3px 28px 0;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -50,7 +61,6 @@
 .cooperation__map::after {
   content: "";
   margin: 0 auto;
-  // margin-top: -40px;
   display: block;
   width: 320px;
   height: 360px;
@@ -75,8 +85,7 @@
 
 @media (min-width: $tablet-width) {
   .cooperation__wrapper {
-    // background-color: #f2f2f2;
-    padding: 66px 72px 59px;
+    padding: 66px 42px 59px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -127,6 +136,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .cooperation__container {
+    background-color: transparent;
+  }
+
   .cooperation__wrapper {
     background-color: #ffffff;
     padding-top: 65px;

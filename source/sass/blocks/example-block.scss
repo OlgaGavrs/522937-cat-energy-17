@@ -1,6 +1,5 @@
 .example {
   background-color: #f2f2f2;
-  // padding-bottom: 27px;
 }
 
 .example__title {
@@ -13,7 +12,8 @@
 .example__description {
   @include paragraph;
   margin-bottom: 25px;
-  width: 266px;
+  // width: 266px;
+  width: 100%;
 }
 
 .example__wrapper {
@@ -59,6 +59,7 @@
 }
 
 .example__total {
+  width: 100%;
   margin-top: 35px;
   flex-grow: 1;
   font-family: $oswald;
@@ -69,24 +70,6 @@
   text-transform: uppercase;
   color: #111111;
 }
-
-// .before-after {
-//   margin: 0 auto;
-//   width: 311px;
-//   height: 232px;
-//   background-image: url("../img/before-mobile@1x.png");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
-// .scale {
-//   margin: 35px auto 0;
-//   width: 84px;
-//   height: 14px;
-//   border-radius: 6px;
-//   border: solid 1px #cdcdcd;
-//   background-color: #ffffff;
-// }
 
 .example__diff {
   max-width: 100%;
@@ -314,9 +297,14 @@
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    background: linear-gradient(to top, #f2f2f2 72%, #ffffff 28%);
+  }
+
   .example::after {
     height: 72%;
     max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
     background: linear-gradient(to right, #f2f2f2 75%, #eaeaea 25%);
   }

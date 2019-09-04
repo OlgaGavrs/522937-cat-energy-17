@@ -13,7 +13,7 @@
   text-align: left;
   color: #222222;
   text-transform: uppercase;
-  width: 280px;
+  width: 100%;
   margin-top: 12px;
   margin-bottom: 12px;
 }
@@ -27,6 +27,7 @@
 }
 
 .add-card__btn-wrapper {
+  width: 100%;
   padding: 0;
   margin-bottom: 16px;
 }
@@ -35,6 +36,7 @@
   display: block;
   padding-top: 11px;
   padding-bottom: 11px;
+  margin: 0 auto;
   width: 280px;
   font-size: 16px;
   line-height: 20px;
@@ -49,6 +51,7 @@
   }
 
   .add-card__title {
+    width: 50%;
     flex-grow: 1;
     font-size: 20px;
     line-height: 20px;
@@ -65,7 +68,8 @@
   }
 
   .add-card__value {
-    margin-left: 53px;
+    width: 96px;
+    text-align: right;
   }
 
   .add-card__btn-wrapper {
@@ -85,10 +89,8 @@
   .add-card {
     flex-wrap: nowrap;
     padding: 0;
-    padding-top: 17px;
-    padding-bottom: 12px;
-    // border-bottom: none;
-    // border-top: 1px solid #e5e5e5;
+    padding-top: 15px;
+    padding-bottom: 14px;
   }
 
   .add-card__title {
@@ -109,7 +111,11 @@
     margin-bottom: 0;
   }
 
-  .add-card__button {
+  .add-card__btn-wrapper {
     width: 245px;
+  }
+
+  .add-card__button {
+    width: 100%;
   }
 }
