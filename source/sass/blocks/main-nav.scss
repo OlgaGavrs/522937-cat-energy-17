@@ -1,7 +1,6 @@
 .main-nav {
   position: relative;
   min-width: 320px;
-  // margin: 0 auto;
   background-color: #ffffff;
 }
 
@@ -31,6 +30,10 @@
   width: 24px;
   height: 18px;
   background: 0 url("../img/icon-mobile-menu.svg") no-repeat;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
 
 .main-nav__list {
@@ -126,7 +129,7 @@
     padding-top: 21px;
     padding-bottom: 7px;
   }
-  // только на главной
+
   .main-nav--index .main-nav__list {
     position: relative;
     z-index: 2;

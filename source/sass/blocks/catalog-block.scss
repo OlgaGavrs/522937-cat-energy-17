@@ -43,6 +43,11 @@
     max-width: 1300px;
     padding-left: 30px;
     padding-right: 30px;
+
+    &::after {
+      content: "";
+      flex-basis: 324px;
+    }
   }
 }
 
@@ -54,5 +59,9 @@
   .catalog__list {
     padding-left: 40px;
     padding-right: 40px;
+
+    &::after {
+      flex-basis: 245px;
+    }
   }
 }
