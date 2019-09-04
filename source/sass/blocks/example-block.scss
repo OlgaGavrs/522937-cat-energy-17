@@ -12,7 +12,6 @@
 .example__description {
   @include paragraph;
   margin-bottom: 25px;
-  // width: 266px;
   width: 100%;
 }
 
@@ -226,7 +225,7 @@
   .example__diff-img {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 8px;
     right: 0;
     max-width: 100%;
     margin: 0 auto;
@@ -298,11 +297,11 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    background: linear-gradient(to top, #f2f2f2 72%, #ffffff 28%);
+    background: linear-gradient(to top, #f2f2f2 68%, #ffffff 32%);
   }
 
   .example::after {
-    height: 72%;
+    height: 68%;
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
@@ -312,10 +311,17 @@
   .example__inner {
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__block {
+    display: flex;
+    flex-direction: column;
   }
 
   .example__title {
-    padding-top: 36px;
+    padding-top: 86px;
     margin-bottom: 146px;
   }
 
@@ -347,18 +353,16 @@
   }
 
   .example__diff {
-    position: absolute;
     width: 700px;
-    top: -20px;
-    right: 0;
   }
 
   .example__diff-img-container {
-    height: 520px;
+    height: 570px;
   }
 
   .example__diff-img {
-    left: 5px;
+    left: 50px;
+    bottom: 18px;
 
     &--before {
       clip: rect(auto, 365px, auto, auto);
@@ -371,7 +375,6 @@
 
   .example__diff-range {
     margin: 0;
-    margin-left: 87px;
-    padding-top: 33px;
+    margin-left: 130px;
   }
 }
